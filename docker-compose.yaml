@@ -1,0 +1,18 @@
+version: "3.7"
+
+services:
+  apache:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: snl/uploader-latest
+    ports:
+      - 8080:80
+    #user: "www-data:www-data"
+    #volumes:
+    #  - type: bind
+    #    source: ./transfer/incoming
+    #    target: /var/www/html/uploader/uploads/
+    #  - type: bind
+    #    source: ./transfer/outgoing
+    #    target: /var/www/html/uploader/downloads/
